@@ -1,29 +1,9 @@
-# fast-stable-diffusion Notebooks, AUTOMATIC1111 + DreamBooth
-Colab & Runpod & Paperspace adaptations AUTOMATIC1111 Webui and Dreambooth.
+# fast-stable-diffusion AUTOMATIC1111 Notebook with bind-mounts to google drive
+Colab adaptation AUTOMATIC1111 Webui
  
 <center><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 RunPod &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paperspace &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colab-AUTOMATIC1111
 
+This is a *minimally-changed* fork of [TheLastBen/fast-stable-diffusion](https://github.com/TheLastBen/fast-stable-diffusion). It's intended primarily for bind-mounting the important things from your google drive, and keeping the rest of the install on your local colab storage, thus everything unrelated to this (dreambooth) is being ignored.
  
-<br><a href="https://www.runpod.io/console/gpu-browse?template=runpod-stable-unified">
-<img src='https://github.com/TheLastBen/fast-stable-diffusion/raw/main/Dreambooth/3.JPG'></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://console.paperspace.com/github/TheLastBen/PPS?machine=Free-GPU"><img src='https://github.com/TheLastBen/fast-stable-diffusion/raw/main/Dreambooth/2.png'></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb"><img src='https://github.com/TheLastBen/fast-stable-diffusion/raw/main/Dreambooth/1.jpg'>
- 
- 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colab-Dreambooth
- 
- 
- 
-</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://colab.research.google.com/github/TheLastBen/fast-stable-diffusion/blob/main/fast-DreamBooth.ipynb"><img src='https://github.com/TheLastBen/fast-stable-diffusion/raw/main/Dreambooth/4.jpg'>
-
-
-
-
-
-[Step by Step guide](https://github.com/Excalibro1/fast-stable-diffusionwik/wiki/fast-stable-diffusion-wiki) by Excalibro1
-
-Dreambooth paper : https://dreambooth.github.io/
-
-SD implementation by @XavierXiao : https://github.com/XavierXiao/Dreambooth-Stable-Diffusion
+For any issues that arise, it also contains a terminal cell. *If you wish to use the terminal cell, you should run it *before* running the Stable Diffusion cell, as otherwise you would need to stop the stable diffusion cell to run it. The terminal cell is non-blocking for colab; once the terminal starts, you can then run the Stable Diffusion cell*. If you simply want to run a few small shell commands, the [batchlinks-webui](https://github.com/etherealxx/batchlinks-webui) extension will allow you to do this by prefixing your commands with a `!` (just like colab). If you want to install packages (ie, use the batchlinks extension for other things), you'll (currently) need to fix the package listing to install the correct version of libunwind by running `apt-get install --fix-broken` before any other commands.
